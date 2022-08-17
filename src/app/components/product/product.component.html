@@ -1,4 +1,20 @@
+
+<button *ngIf="dataLoaded==false" class="btn btn-primary" type="button" disabled>
+<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+Loading...
+</button>
 <table class="table">
+    <thead>
+        <tr>
+            <th>Product Id</th>
+            <th>Category Id</th>
+            <th>Product Name</th>
+            <th>Unit Price</th>
+            <th>Unit In Stock</th>
+            
+        </tr>
+    </thead>
+    
     <tr *ngFor="let product of products">
         <td>{{product.productId}}</td>
         <td>{{product.categoryId}}</td>
